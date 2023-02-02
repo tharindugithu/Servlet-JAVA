@@ -11,4 +11,14 @@
      <servlet-name>first_servlet</servlet-name>
      <url-pattern>/add</url-pattern>
   </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>second_servlet</servlet-name>
+    <servlet-class>com.test.SqServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+     <servlet-name>second_servlet</servlet-name>
+     <url-pattern>/sq</url-pattern>
+  </servlet-mapping>
 </web-app>
