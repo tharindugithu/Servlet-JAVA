@@ -26,8 +26,7 @@ public class AddServelet extends HttpServlet {
         int j = Integer.parseInt(req.getParameter("num2"));
 	    int k = i+j;//total value 
 	    
-	    req.setAttribute("k", k);//sending data one to servlet from other servlet
-	    RequestDispatcher rd = req.getRequestDispatcher("sq");//redirect to the sqservlet class
-	    rd.forward(req, res);
+	    PrintWriter out = res.getWriter();
+	    out.println("<h1>result is : </h1>"+k);
 	}
 }
