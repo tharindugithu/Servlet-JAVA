@@ -27,12 +27,9 @@ public class AddServelet extends HttpServlet {
         int j = Integer.parseInt(req.getParameter("num2"));
 	    int k = i+j;//total value 
 	    
-	    //Session
-	    HttpSession session = req.getSession();
-	    session.setAttribute("k", k);
 	    
 	    //URL rewriting
-	    res.sendRedirect("sq");//create a url sq?k=value , second servlet can get the value in url
+	    res.sendRedirect("sq?k="+k);//create a url sq?k=value , second servlet can get the value in url
 	    
 	}
 }
