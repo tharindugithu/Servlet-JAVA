@@ -25,7 +25,8 @@ public class AddServelet extends HttpServlet {
         int i = Integer.parseInt(req.getParameter("num1"));//get the values in url
         int j = Integer.parseInt(req.getParameter("num2"));
 	    int k = i+j;//total value 
-	    
+	    //URL rewriting
+	    res.sendRedirect("sq?k="+k);//create a url sq?k=value , second servlet can get the value in url
 	    
 	}
 }
