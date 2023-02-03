@@ -13,6 +13,8 @@
       int j = Integer.parseInt(request.getParameter("num2"));
 	  int k = i+j;//total value 
 	  out.println("result is : "+k);
+	  //response.sendRedirect("home.jsp");
+	  
    %>
  
 </body>
