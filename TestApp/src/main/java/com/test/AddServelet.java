@@ -5,6 +5,7 @@ import java.io.PrintWriter;
 
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
+import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -27,9 +28,10 @@ public class AddServelet extends HttpServlet {
         int j = Integer.parseInt(req.getParameter("num2"));
 	    int k = i+j;//total value 
 	    
-	    //Session
-	    HttpSession session = req.getSession();
-	    session.setAttribute("k", k);
+	    //Cookie
+	    //interger --> int_Value + ""
+	    Cookie cookie = new Cookie("k",k+"");
+	    res.addCookie(cookie);//send to cookie back to client
 	    
 	    //URL rewriting
 	    res.sendRedirect("sq");//create a url sq?k=value , second servlet can get the value in url
