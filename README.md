@@ -5,7 +5,7 @@
 <li>JSP convert to servlet</li>
 <li>"<% %>"this is scriptlic tags</li>
 <li>what ever you write those tags go to sevlet service method</li>
-<li>
+<li>declare variable in not service section
   <ul>
    <li>"<% %>" --> go to service method</li>
    <li>"<%! %>" --> not go to service method</li>
