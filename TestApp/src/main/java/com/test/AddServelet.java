@@ -8,6 +8,7 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
 public class AddServelet extends HttpServlet {
   
@@ -25,8 +26,13 @@ public class AddServelet extends HttpServlet {
         int i = Integer.parseInt(req.getParameter("num1"));//get the values in url
         int j = Integer.parseInt(req.getParameter("num2"));
 	    int k = i+j;//total value 
+	    
+	    //Session
+	    HttpSession session = req.getSession();
+	    session.setAttribute("k", k);
+	    
 	    //URL rewriting
-	    res.sendRedirect("sq?k="+k);//create a url sq?k=value , second servlet can get the value in url
+	    res.sendRedirect("sq");//create a url sq?k=value , second servlet can get the value in url
 	    
 	}
 }
