@@ -2,7 +2,7 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:web="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd" id="WebApp_ID" version="5.0">
   
  <!--   every servlet need to create above tags -->
-  <servlet>
+ <!--   <servlet>
     <servlet-name>first_servlet</servlet-name>
     <servlet-class>com.test.AddServelet</servlet-class>
   </servlet>
@@ -25,8 +25,9 @@
   <servlet>
     <servlet-name>third_servlet</servlet-name>
     <servlet-class>com.test.MyServlet</servlet-class>
-    
-    <!-- get the config for specific servlet -->
+    -->
+    <!-- get the configeration for specific servlet -->
+    <!--  
     <init-param>
       <param-name>name</param-name>
       <param-value>Chamikara</param-value>
@@ -48,5 +49,5 @@
     <param-value>Samsung</param-value>
   </context-param>
   
-  
+  -->
 </web-app>

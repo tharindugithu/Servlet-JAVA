@@ -6,12 +6,15 @@ import java.io.PrintWriter;
 import jakarta.servlet.ServletConfig;
 import jakarta.servlet.ServletContext;
 import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
+@WebServlet("/home")
 public class MyServlet extends HttpServlet {
-    public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException {//only accept get reqvest
+   
+	public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException {//only accept get reqvest
 		PrintWriter out = res.getWriter();
 		out.print("<h1>Hi</h1>");
 		
@@ -30,4 +33,5 @@ public class MyServlet extends HttpServlet {
 		
 		out.print(str3);
 	}
+	
 }
