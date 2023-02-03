@@ -13,8 +13,8 @@ public class SqServlet extends HttpServlet
     public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException 
     {//only accept get reqvest
 		
-    	HttpSession session = req.getSession();
-        int k = (int) session.getAttribute("k");
+    	
+            int k = Integer.parseInt(req.getParameter("k"));//get data in url
 	    PrintWriter out = res.getWriter();
 	    out.println("<h1>result is : </h1>"+k*k);//send to response client
 	}
