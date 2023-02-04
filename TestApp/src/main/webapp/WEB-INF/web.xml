@@ -1,53 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:web="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd" id="WebApp_ID" version="5.0">
-  
- <!--   every servlet need to create above tags -->
- <!--   <servlet>
-    <servlet-name>first_servlet</servlet-name>
-    <servlet-class>com.test.AddServelet</servlet-class>
-  </servlet>
-  
-  <servlet-mapping>
-     <servlet-name>first_servlet</servlet-name>
-     <url-pattern>/add</url-pattern>
-  </servlet-mapping>
-  
-  <servlet>
-    <servlet-name>second_servlet</servlet-name>
-    <servlet-class>com.test.SqServlet</servlet-class>
-  </servlet>
-  
-  <servlet-mapping>
-     <servlet-name>second_servlet</servlet-name>
-     <url-pattern>/sq</url-pattern>
-  </servlet-mapping>
-  
-  <servlet>
-    <servlet-name>third_servlet</servlet-name>
-    <servlet-class>com.test.MyServlet</servlet-class>
-    -->
-    <!-- get the configeration for specific servlet -->
-    <!--  
-    <init-param>
-      <param-name>name</param-name>
-      <param-value>Chamikara</param-value>
-    </init-param>
-  </servlet>
-  
-  <servlet-mapping>
-     <servlet-name>third_servlet</servlet-name>
-     <url-pattern>/home</url-pattern>
-  </servlet-mapping>
-  
-  <context-param>
-    <param-name>name</param-name>
-    <param-value>Tharindu</param-value>
-  </context-param>
-  
-  <context-param>
-    <param-name>phone</param-name>
-    <param-value>Samsung</param-value>
-  </context-param>
-  
-  -->
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:web="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd http://xmlns.jcp.org/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="5.0">
+  <filter>
+    <display-name>AgeFilter</display-name>
+    <filter-name>AgeFilter</filter-name>
+    <filter-class>com.test.AgeFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>AgeFilter</filter-name>
+    <url-pattern>/formServlet</url-pattern>
+  </filter-mapping>
+  <filter>
+    <display-name>NameFilter</display-name>
+    <filter-name>NameFilter</filter-name>
+    <filter-class>com.test.NameFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>NameFilter</filter-name>
+    <url-pattern>/formServlet</url-pattern>
+  </filter-mapping>
 </web-app>
