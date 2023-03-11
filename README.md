@@ -1,3 +1,3 @@
 # Servlet-JAVA
-servlet context ---> can access all servlet
-servlet config ---> can access one servlet belong to context
+<br>servlet context ---> can access all servlet</br>
+<br>servlet config ---> can access one servlet belong to context</br>
